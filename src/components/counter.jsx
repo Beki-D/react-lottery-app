@@ -1,19 +1,6 @@
 import React, { Component } from 'react'
 
 class Counter extends Component {
-    // componentDidUpdate(prevProps, prevState) {
-    //     console.log("prevProps", prevProps);
-    //     console.log('prevState', prevState);
-    //     if(prevProps.counter.value !== this.props.counter.value){
-    //         //Ajax call and get new data
-    //         console.log("Makin Ajax call to fetch new data from server")
-    //     }
-    // }
-
-    // componentWillUnnmount() {
-    //     console.log("X Counter - Unnmount");
-    // }
-
     render() {
         console.log("Counter - Rendered");
 
@@ -21,10 +8,16 @@ class Counter extends Component {
             <>
                 {this.props.children}
                 
+                {/* <img 
+                    src={this.props.pics}
+                    alt="item_image"
+                    style={{ height: "70px", paddingRight: "10px" }} 
+                /> */}
+
                 <div className="row">
                     <div className="col-1 me-2">
                         <span style={this.styles} className={ this.getBadgeClasses() }>
-                            {this.formatCount()}
+                            { this.formatCount()} {(this.formatCount()) > 1 ? "Tickets" : "Ticket"}
                         </span>
                     </div>
                     <div className="col">

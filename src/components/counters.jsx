@@ -2,10 +2,19 @@ import React, { Component } from 'react';
 import Counter from './counter';
 
 class Counters extends Component {
+    i=0;
+
+  image = [
+    "/Assets/Images/earphone.jpg",
+    "/Assets/Images/iphone12.jpg",
+    "/Assets/Images/GalaxyM22.jpg",
+    "/Assets/Images/sandisk-external-ssd.webp"
+  ]
+
     render() { 
         console.log("Counters - Rendered");
 
-        const {onReset, counters, onDelete, onIncrement, onDecrement} = this.props;
+        const {onReset, counters, onDelete, onIncrement, onDecrement, pics} = this.props;
 
         return (
         <div>
@@ -19,8 +28,15 @@ class Counters extends Component {
                     onDelete={onDelete}
                     onIncrement={onIncrement}
                     onDecrement={onDecrement} 
-                    counter={count}>
+                    counter={count}
+                    pics={pics} >
                         <h4>Item - {count.id}</h4>
+                        <img 
+                            src={this.image[count.id - 1]}
+                            alt="item_image"
+                            style={{ height: "70px", paddingRight: "10px" }} 
+                            />
+                            { (this.i<4) ? this.i++ : "" } 
                 </Counter>
             ))}
         </div>

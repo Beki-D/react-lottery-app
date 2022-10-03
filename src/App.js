@@ -12,17 +12,13 @@ class App extends Component {
         {id: 4, value: 0},
     ]
   };
-
-  // constructor(props) {
-  //   super(props);
-  //   console.log('App - Constructed', this.props);
-  // }
-
-  // //perfect for Ajax applications
-  // componentDidMount() {
-  //   //Ajax call
-  //   console.log("App - Mounted")
-  // }
+  
+  image = [
+    "/Assets/Images/earphone.jpg",
+    "/Assets/Images/iphone12.jpg",
+    "/Assets/Images/GalaxyM22.jpg",
+    "/Assets/Images/sandisk-external-ssd.webp"
+  ]
 
   handleIncrement = counter => {
       const counters = [...this.state.counters];
@@ -74,6 +70,7 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete} 
+            pics={this.image}
           />
         </main>
       </>
