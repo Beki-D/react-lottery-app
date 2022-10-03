@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Counter from './counter';
 
 class Counters extends Component {
-    i=0;
-
   image = [
     "/Assets/Images/earphone.jpg",
     "/Assets/Images/iphone12.jpg",
@@ -36,7 +34,6 @@ class Counters extends Component {
                             alt="item_image"
                             style={{ height: "70px", paddingRight: "10px" }} 
                             />
-                            { (this.i<4) ? this.i++ : "" } 
                 </Counter>
             ))}
         </div>
