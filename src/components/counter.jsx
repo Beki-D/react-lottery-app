@@ -15,7 +15,17 @@ class Counter extends Component {
                     style={{ height: "70px", paddingRight: "10px" }} 
                 /> */}
 
-                <div className="row h-80 p-5 text-white bg-dark rounded-3">
+                <div className="card col-1 me-2">
+                        <img 
+                            src={this.props.pics[imgIndex]}
+                            alt="item_image"
+                            style={{ height: "70px", paddingRight: "10px" }} 
+                        />
+                    <div className="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div className="row h-100 p-3 text-white bg-dark rounded-3">
                     <div className="col-1 me-2">    
                         <img 
                             src={this.props.pics[imgIndex]}
