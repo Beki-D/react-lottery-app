@@ -15,30 +15,20 @@ class Counter extends Component {
                     style={{ height: "70px", paddingRight: "10px" }} 
                 /> */}
 
-                <div className="card col-1 me-2">
+                <div className="card col-2 bg-dark" style={{width: "14rem"}}>
                         <img 
+                            className="p-3"
                             src={this.props.pics[imgIndex]}
                             alt="item_image"
-                            style={{ height: "70px", paddingRight: "10px" }} 
+                            style={{ height: "10rem", width: "13rem", paddingRight: "10px" }} 
                         />
                     <div className="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div className="row h-100 p-3 text-white bg-dark rounded-3">
-                    <div className="col-1 me-2">    
-                        <img 
-                            src={this.props.pics[imgIndex]}
-                            alt="item_image"
-                            style={{ height: "70px", paddingRight: "10px" }} 
-                        />
-                    </div>
-                    <div className="col-1 me-2">
-                        <span style={this.styles} className={ this.getBadgeClasses() }>
-                            { this.formatCount()} {(this.formatCount()) > 1 ? "Tickets" : "Ticket"}
-                        </span>
-                    </div>
-                    <div className="col">
+                        <div className="col-1 me-2">
+                            <span style={this.styles} className={ this.getBadgeClasses() }>
+                                { this.formatCount()} {(this.formatCount()) > 1 ? "Tickets" : "Ticket"}
+                            </span>
+                        </div>
+                        <div className="col">
                         <button 
                             onClick={() => this.props.onIncrement(this.props.counter)} 
                             className="btn btn-info btn-sm">
@@ -56,8 +46,8 @@ class Counter extends Component {
                             Delete
                         </button>
                     </div>
-                </div>
-                
+                    </div>
+                </div> 
             </>
         );
     }
