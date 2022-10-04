@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class Counter extends Component {
     render() {
         console.log("Counter - Rendered");
+        let imgIndex = this.props.id - 1;
 
         return (
             <>
@@ -14,7 +15,14 @@ class Counter extends Component {
                     style={{ height: "70px", paddingRight: "10px" }} 
                 /> */}
 
-                <div className="row">
+                <div className="row h-80 p-5 text-white bg-dark rounded-3">
+                    <div className="col-1 me-2">    
+                        <img 
+                            src={this.props.pics[imgIndex]}
+                            alt="item_image"
+                            style={{ height: "70px", paddingRight: "10px" }} 
+                        />
+                    </div>
                     <div className="col-1 me-2">
                         <span style={this.styles} className={ this.getBadgeClasses() }>
                             { this.formatCount()} {(this.formatCount()) > 1 ? "Tickets" : "Ticket"}

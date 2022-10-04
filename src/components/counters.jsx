@@ -23,17 +23,13 @@ class Counters extends Component {
             {counters.map( count => (
                 <Counter 
                     key={count.id}
+                    id={count.id}
                     onDelete={onDelete}
                     onIncrement={onIncrement}
                     onDecrement={onDecrement} 
                     counter={count}
-                    pics={pics} >
+                    pics={this.image} >
                         <h4>Item - {count.id}</h4>
-                        <img 
-                            src={this.image[count.id - 1]}
-                            alt="item_image"
-                            style={{ height: "70px", paddingRight: "10px" }} 
-                            />
                 </Counter>
             ))}
         </div>
